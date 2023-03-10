@@ -3,24 +3,19 @@ describe('Home Page Spec', () => {
     cy.visit('')
   })
 
-  it('should increment counter correctly', () => {
-    const times = 10
-    const incrementButton = cy.get('[data-cy="increment-button"]')
-    for (let i = 0; i < times; i++) {
-      incrementButton.click()
-    }
+  it('deve renderizar corretamente', () => {
+    const red = 255;
+    const green = 255;
+    const blue = 255;
+    const alpha = 1;
 
-    cy.get('[data-cy="counter-value"]').should('have.text', times)
-  })
+    cy.get('[data-cy="button-red"]').invoke('val', red).trigger('input')
+    cy.get('[data-cy="button-green"]').invoke('val', green).trigger('input')
+    cy.get('[data-cy="button-blue"]').invoke('val', blue).trigger('input')
+    cy.get('[data-cy="button-alpha"]').invoke('val', alpha).trigger('input')
 
-  it('should reset counter correctly', () => {
-    const times = 10
-    const incrementButton = cy.get('[data-cy="increment-button"]')
-    for (let i = 0; i < times; i++) {
-      incrementButton.click()
-    }
+    const colorValue = cy.get('[data-cy=view-panel]')
 
-    cy.get('[data-cy="reset-button"]').click()
-    cy.get('[data-cy="counter-value"]').should('have.text', 0)
+    colorValue.should('have.css', 'background-color', 'rgb(255, 255, 255)')
   })
 })

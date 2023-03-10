@@ -4,7 +4,7 @@ import { ButtonPanel, ColorButton } from './styles'
 
 const App = () => {
   const [red, setRed] = useState(250)
-  const [green, setGreen] = useState(0)
+  const [green, setGreen] = useState(25)
   const [blue, setBlue] = useState(0)
   const [alpha, setAlpha] = useState(1)
 
@@ -20,16 +20,16 @@ const App = () => {
       />
 
 <ButtonPanel>
-  Red<ColorButton data-cy="button-red" min={0} max={255} onChange={event=> setRed(Number(event.target.value))} >
+  Red<ColorButton data-cy="button-red" min={0} max={255}  onInput={(event: React.ChangeEvent<HTMLInputElement>)=> setRed(Number(event.target.value))} >
 
   </ColorButton>
-  Green<ColorButton data-cy="button-green" min={0} max={255} onChange={event=> setGreen(Number(event.target.value))}  >
+  Green<ColorButton data-cy="button-green" min={0} max={255} onInput={(event: React.ChangeEvent<HTMLInputElement>)=> setGreen(Number(event.target.value))}  >
     
   </ColorButton>
-  Blue<ColorButton data-cy="button-blue" min={0} max={255} onChange={event=> setBlue(Number(event.target.value))}  >
+  Blue<ColorButton data-cy="button-blue" min={0} max={255} onInput={(event: React.ChangeEvent<HTMLInputElement>)=> setBlue(Number(event.target.value))}  >
     
   </ColorButton>
-  Alpha<ColorButton data-cy="button-alpha" min={0} max={1} step={0.1} onChange={event=> setAlpha(Number(event.target.value))} >
+  Alpha<ColorButton data-cy="button-alpha" min={0} max={1} step={0.1} onInput={(event: React.ChangeEvent<HTMLInputElement>)=> setAlpha(Number(event.target.value))} >
     
   </ColorButton>
 </ButtonPanel>

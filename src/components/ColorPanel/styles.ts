@@ -17,25 +17,25 @@ export const ViewPanel = styled.div`
 export const Red = styled.span`
   font-family: 'regular';
   font-size: 20px;
-  color: white;
+  color: black;
   margin-right: 10px;
 `
 export const Green = styled.span`
   font-family: 'regular';
   font-size: 20px;
-  color: white;
+  color: black;
   margin-left: 10px;
 `
 export const Blue = styled.span`
   font-family: 'regular';
   font-size: 20px;
-  color: white;
+  color: black;
   margin-left: 10px;
 `
 export const Alpha = styled.span`
   font-family: 'regular';
   font-size: 20px;
-  color: white;
+  color: black;
   margin-left: 10px;
 `
 

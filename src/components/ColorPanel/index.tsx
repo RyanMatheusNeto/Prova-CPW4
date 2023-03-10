@@ -10,7 +10,7 @@ type Props = {
 
 const Color = ({ red,green,blue,alpha }: Props) => {
   return (
-    <ViewPanel style={{backgroundColor: `rgba(${red}, ${green}, ${blue}, ${alpha})`}}>
+    <ViewPanel data-cy='view-panel' style={{backgroundColor: `rgba(${red}, ${green}, ${blue}, ${alpha})`}}>
         <Red 
      data-cy='red-box'>
           red={red}
